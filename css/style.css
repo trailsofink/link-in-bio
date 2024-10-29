@@ -3,6 +3,12 @@ body {
   background-color: #1a1b26;
   color: #e6e7ed;
   padding: 25px 0;
+  font-family: "Courier New";
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .image-row,
@@ -11,6 +17,11 @@ body {
 .links-row {
   display: flex;
   justify-content: center;
+}
+
+.name-row,
+.links-row h2 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .image-row {
@@ -26,9 +37,15 @@ body {
   a {
       margin: 0 10px;
       color: #bb9af7;
+      display: flex;
+      align-items: center;
+      transition:
+          scale 0.3s ease-in-out,
+          color 0.3s ease-in-out;
       svg {
           width: 25px;
           height: 25px;
+          margin-right: 5px;
           color: inherit;
           transition:
               scale 0.3s ease-in-out,
@@ -36,10 +53,8 @@ body {
       }
   }
   a:hover {
-      svg {
-          scale: 1.1;
-          color: #7aa2f7;
-      }
+      scale: 1.1;
+      color: #7aa2f7;
   }
 }
 
@@ -61,9 +76,11 @@ body {
               border-radius: 25px;
               text-align: center;
               width: 100%;
+              box-shadow: 3px 5px #414868;
               transition:
                   scale 0.3s ease-in-out,
-                  background-color 0.3s ease-in-out;
+                  background-color 0.3s ease-in-out,
+                  box-shadow 0.3s ease-in-out;
           }
       }
 
@@ -71,6 +88,7 @@ body {
           a {
               background-color: #a9b1d6;
               scale: 0.99;
+              box-shadow: 1px 3px #24283b;
           }
       }
   }
